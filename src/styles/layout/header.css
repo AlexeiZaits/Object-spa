@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header__logo{
+    width: 273.05px;
+    height: 99.447px;
+    z-index: 3;
+}
+
+.header__nav{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.header__container{
+    background-image: url('../../assets/images/main.webp');
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.header__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    height: 1087px;
+    padding: 30px;
+}
+
+.header__nav-item{
+    letter-spacing: -0.44px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header__main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.header__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    position: relative;
+}
+
+.header__footer-button{
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.header__footer-steam{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 0.12px;
+    background: rgba(167.04, 167.04, 167.04, 0.0);
+    background-blend-mode: hard-light;
+    backdrop-filter: blur(25px);
+}
+
+.header__footer-steam h3 {
+    letter-spacing: -0.43px;
+}
+
+.header__footer-steam p {
+    letter-spacing: -0.36px;
+    font-size: 18px;
+}
+
+.header__footer-steam1{
+    background-image: url("../../assets/images/russianSteam.webp");
+}
+
+.header__footer-steam2{
+    background-image: url("../../assets/images/russianSteam.webp");
+}

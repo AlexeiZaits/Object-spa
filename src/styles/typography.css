@@ -1,0 +1,84 @@
+.H1{
+    font-family: var(--font-family);
+    font-size: 70px;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 1.5;
+    color: var(--gray-white);
+}
+
+.H2{
+    font-family: var(--font-family);
+    color: var(--gray-white);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.H3{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.H4{
+    color: var(--gray-white);
+    font-family: Mont;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: normal;
+    line-height: 60px;
+}
+
+.H5{
+    font-family: var(--font-family);
+    color: var(--gray-white);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.T1{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    line-height: normal;
+}
+
+.T2{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+}
+
+.T3{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.T4{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.T5{
+    color: var(--gray-white);
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.5;
+}

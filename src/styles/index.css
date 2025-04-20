@@ -1,0 +1,58 @@
+@import url(./reset.css);
+@import url(../assets/fonts/stylesheet.css);
+@import url(./typography.css);
+@import url(./layout/header.css);
+@import url(./layout/footer.css);
+@import url(./components/button.css);
+@import url(./components/steamRoom.css);
+
+:root {
+    /* gray colors */
+    --gray-darker: #212121;
+    --gray-black: #000;
+    --gray-dark: #1D1E1C;
+    --gray-medium: #2F2F2F;
+    --gray-light: #CCCCCC;
+    --gray-lighter: #FFFBFB;
+    --gray-white: #FFFFFF;
+    
+    /* background colors */
+    --background-main: #FDFDFD;
+    --button-main: rgba(195, 195, 195, 0.66);
+    --button-secondary: rgba(0, 0, 0, 0.66);
+    --background-gray: #6D6B6B;
+
+    /* gradient */
+    --gradient-main-linear: linear-gradient(90deg, #897ACC 0%, #CC29A3 49.48%, #F23051 100%);
+    --gradient-main-text: linear-gradient(90deg, #897ACC, #CC29A3, #F23051);
+    
+    /* border */
+    --border-button: 1.338px solid #636363;
+
+    /* Шрифты и общие параметры */
+    --font-family: 'Mont', sans-serif;
+    --font-inter: 'interregular', sans-serif;
+    --border-color: #F1F1F1;
+    --border-main-radius: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray-white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    padding-bottom: 0px;
+}

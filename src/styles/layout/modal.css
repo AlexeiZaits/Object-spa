@@ -1,0 +1,39 @@
+.modal{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);;
+    width: 100vw;
+    height: 100vh;
+    top: 88px;
+    left: 0;
+    position: absolute;
+}
+
+.modal__body-menu{
+    width: max-content;
+    margin-left: auto;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal__content-menu{
+    margin: 0 auto;
+    padding: 16px 16px;
+    
+    @media (min-width: 1367px) {
+        max-width: 1420px;
+        padding: 20px 45px;
+    }
+}

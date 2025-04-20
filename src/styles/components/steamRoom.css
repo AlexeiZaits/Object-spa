@@ -1,0 +1,12 @@
+.steamRoom{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    height: 468px;
+    gap: 9px;
+    justify-content: flex-end;
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+}
