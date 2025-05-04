@@ -1,5 +1,5 @@
 .button{
-    padding: 30px;
+    padding: clamp(24.9px, 1.5625vw, 30px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +9,14 @@
     backdrop-filter: blur(25px);
     border: none;
     width: max-content;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    
+    &:hover{
+        border-radius: 20px;
+        background: black;
+    }
 }
 
 .button.secondary{

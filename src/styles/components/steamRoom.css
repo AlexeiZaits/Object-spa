@@ -1,12 +1,64 @@
 .steamRoom{
-    padding: 30px;
+    padding: clamp(10px, 1.56vw, 30px);
     display: flex;
     flex-direction: column;
-    width: 384px;
-    height: 468px;
+    width: 100%;
+    height: 100%;
     gap: 9px;
+    cursor: pointer;
     justify-content: flex-end;
     background-size: cover;     
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    
+    &:hover{
+        .steamRoom__img{
+            filter: grayscale(0%);
+        }
+        .steamRoom__price{
+            opacity: 1;
+        }
+    }
+}
+
+.steamRoom__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    filter: grayscale(100%);
+}
+
+.steamRoom__title{
+    font-size: clamp(12px, 1.25vw, 24px);
+}
+
+.steamRoom__describtion{
+    font-size: clamp(8px, 0.9375vw, 18px);
+}
+
+.steamRoom__price{
+    background: rgba(77, 77, 77, 0.90);
+    backdrop-filter: blur(11.149999618530273px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    right: clamp(1px, 1.61197916667vw, 30.95px);
+}
+
+.steamRoom__price-text{
+    color: var(--gray-white);
+    padding: clamp(1px, 0.66510416666vw, 12.77px) clamp(1px, 0.88697916666vw, 17.03px);
+    font-family: var(--font-family);
+    font-size: clamp(1px, 0.88697916666vw, 17.03px);
+    font-weight: 600;
+    line-height: 108.632%;
 }

@@ -1,0 +1,118 @@
+.programs__title{
+    color: var(--gray-darker);
+    letter-spacing: -0.94px;
+    line-height: normal;
+    margin-top: 81px;
+    font-size: clamp(32px, 2.5vw, 48px);
+
+    @media (max-width: 1024px) {
+      margin-top: 2px;
+      text-align: center;
+    }
+}
+
+.programs__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (max-width: 1024px) {
+    height: max-content;
+    transition: all 0.6s linear;
+    padding: 16px !important;
+  }
+}
+
+.programms__list{
+  display: flex;
+  flex-direction: row;
+  height: clamp(600px, 50vw, 959px);
+  width: max-content;
+  transition: all 0.8s ease;
+  gap: clamp(10px, 2.08vw, 40px);
+
+  @media (max-width: 1024px) {
+    transition: all 0.8s linear;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: max-content;
+  }
+}
+
+.programms__list-cards {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  gap: clamp(5px, 1.742vw, 33.45px);
+}
+
+.programm__card-content {
+  overflow: hidden;
+  padding: clamp(16px, 1.74vw, 33.45px);
+}
+
+.programms__list-container{
+  padding-left: clamp(31.4px, 3.276vw, 62.89px);
+  padding-right: clamp(62.4px, 6.276vw, 124.89px);
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  opacity: 0;
+  display: none;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.programms-mobile__card{
+  width: 100%;
+  padding: 16px;
+  height: 172px;
+}
+
+.programms-mobile__card-title{
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.programms-mobile__card-price{
+  color: #5D5D5D;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.programms-mobile__card-descp{
+  color: #000;
+  font-size: 9.576px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15.048px;
+}
+
+.programms-mobile__card-button{
+  display: flex;
+  padding: 12.684px;
+  justify-content: center;
+  align-items: center;
+  border: 0.838px solid #636363;
+  background: rgba(0, 0, 0, 0.66);
+  background-blend-mode: hard-light;
+  backdrop-filter: blur(10.570279121398926px);
+  font-size: 10.147px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 10.147px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
