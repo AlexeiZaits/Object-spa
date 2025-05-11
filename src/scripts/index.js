@@ -152,7 +152,7 @@ const initForm = () => {
       closeBtns[1].style.display = "block"
       closeBtns[0].style.display = "none"
       sendBtn.style.display = "none"
-      axios.post("http://127.0.0.1:8000/send", entries)
+      axios.post("http://127.0.0.1:80/api/send", entries)
     }
   });
 }
