@@ -1,11 +1,20 @@
-# Стадия 1: билд приложения
-FROM node:18 AS builder
+FROM node:alpine AS builder
+
 WORKDIR /app
-COPY . .
+
+COPY package*.json ./
 RUN npm install
+
+COPY . .
+
 RUN npm run build
 
-# Стадия 2: Nginx для отдачи фронта
-FROM nginx:stable
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/dist /usr/share/nginx/html
+FROM nginx:stable-alpine
+
+COPY --from=builder /app/src/dist /usr/share/nginx/html
+
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 5174
+
+CMD ["nginx", "-g", "daemon off;"]

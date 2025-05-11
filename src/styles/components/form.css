@@ -154,6 +154,7 @@
   align-items: center;
   border-radius: 8px;
   width: 100%;
+  cursor: pointer;
   padding: 8px;
   color: #000;
   font-family: Mont;

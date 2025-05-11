@@ -10,6 +10,10 @@
     }
 }
 
+.about__ref{
+  position: absolute;
+}
+
 .about__img-mobile{
     position: absolute;
     z-index: -1;
@@ -60,6 +64,10 @@
       text-align: center;
       line-height: 150%;
     }
+}
+
+.about{
+  position: relative;
 }
 
 .about__main{

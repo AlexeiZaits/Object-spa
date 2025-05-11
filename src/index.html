@@ -24,6 +24,22 @@
                             <a class="T2 header__nav-item" href="#contacts">Контакты</a>
                         </nav>
                     </div>
+                    <div class="header__main-fixed fixed">
+                        <a class="header__logo fixed" href="#header">
+                          <img class="header__img fixed" src="./assets/images/logo.png" alt="logo">
+                        </a>
+                        <nav class="header__nav">
+                            <a class="T2 header__nav-item" href="#about">О нас</a>
+                            <a class="T2 header__nav-item" href="#programs">Программы</a>
+                            <a class="T2 header__nav-item" href="#why">Почему мы</a>
+                            <a class="T2 header__nav-item" href="#contacts">Контакты</a>
+                        </nav>
+                        <div class="burger">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </div>
                     <div class="header__footer">
                         <img class="header__footer-logo" src="./assets/images/logo.png" alt="logo">
                         <p class="T4 header__footer-text">место для тех - <br/>кто ценит качественный отдых</p>
@@ -47,7 +63,8 @@
             </div>
         </header>
         <main>
-            <section id="about" class="about">
+            <section class="about">
+                <div id="about" class="about__ref"></div>
                 <div class="wrapper about__wrapper">
                     <img class="about__img" src="./assets/icons/background.svg" alt="">
                     <img class="about__img-mobile" src="./assets/icons/backgroundMobile.svg" alt="">
@@ -57,12 +74,13 @@
                     </div>
                 </div>
             </section>
-            <section id="programs" class="programs">
+            <section class="programs">
+                <div id="programs" class="programs__ref"></div>
                 <div class="wrapper programs__wrapper">
                     <h2 class="H2 programs__title">Программы отдыха</h2>
-                    <div class="programms__list">
-                        <div class="programms-mobile__item active">
-                          <img class="programms-mobile__img" src="./assets/images/programm1.webp" class="promramm__img">
+                    <div class="programms__list-mobile">
+                        <div class="programms-mobile__item">
+                          <img  src="./assets/images/programm1.webp" class="promramm__img" alt="img">
                           <h4 class="T5 programm-mobile__title">ДЛЯ НЕГО</h4>
                           <div class="programm-mobile__svg">
                             <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,22 +89,66 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="programm__card">
-                          <div class="programm__card-content">
-                            <div class="programm__card-container">
-                              <div class="programm__card-group">
-                                <h3 class="H4 programm__card-title">Сила двух мастеров</br>(Римская Парная)</h3>
-                                <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                        <div class="programm__cards active">
+                            <div class="programm__card active">
+                              <div class="programm__card-content">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила двух мастеров<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">35 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
+                                </p>
                               </div>
-                              <button class="T4 button programm__card-button">Забронировать</button>
                             </div>
-                            <p class="T5 programm__card-info">
-                              Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
-                            </p>
-                          </div>
+                            <div class="programm__card active">
+                              <div class="programm__card-content">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила стихий:<br>Детокс и возрождение<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Три стихии для вашего обновления. Пар, веники и мыльная пена объединяются в этой программе для глубокого очищения и релакса. Натуральные ингредиенты и авторские техники помогут снять напряжение и вернуть лёгкость телу.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="programm__card active">
+                              <div class="programm__card-content">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Царь Таежник</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Парение, которое вернет силы и власть над временем. Эксклюзивный ритуал для мужчин, сочетающий силу уральской природы и мастерство банщика. Глубокое парение, контрастные ванночки для ног, массаж стоп и индивидуальный подход. Идеально для тех, кто ценит время и качество отдыха.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="programm__card active">
+                              <div class="programm__card-content">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Алмазное Возрождение</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Профессиональное удаление усталости. Интенсивная программа для глубокого детокса и перезагрузки. Контрастные техники, лимфодренажный массаж, обёртывание и алтайские ингредиенты помогут вывести токсины и восстановить энергию. Для тех, кто готов к настоящему обновлению.
+                                </p>
+                              </div>
+                            </div>
                         </div>
                         <div class="programms-mobile__item">
-                          <img class="programms-mobile__img" src="./assets/images/programm2.webp" class="promramm__img">
+                          <img  src="./assets/images/programm2.webp" class="promramm__img" alt="img">
                           <h4 class="T5 programm-mobile__title">ДЛЯ НЕЁ</h4>
                           <div class="programm-mobile__svg">
                             <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,102 +157,37 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="programm__card">
-                          <div class="programm__card-content">
-                            <div class="programm__card-container">
-                              <div class="programm__card-group">
-                                <h3 class="H4 programm__card-title">Сила двух мастеров</br>(Римская Парная)</h3>
-                                <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                              </div>
-                              <button class="T4 button programm__card-button">Забронировать</button>
-                            </div>
-                            <p class="T5 programm__card-info">
-                              Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="programms-mobile__item">
-                          <img class="programms-mobile__img" src="./assets/images/programm3.webp" class="promramm__img">
-                          <h4 class="T5 programm-mobile__title">ДЛЯ ПАРЫ</h4>
-                          <div class="programm-mobile__svg">
-                            <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M18 13.2583L22.9393 8.31896C23.5251 7.73318 23.5251 6.78343 22.9393 6.19764L18 1.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
-                              <path opacity="0.2" d="M22.5 7.2583L1.5 7.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="programm__card">
-                          <div class="programm__card-content">
-                            <div class="programm__card-container">
-                              <div class="programm__card-group">
-                                <h3 class="H4 programm__card-title">Сила двух мастеров</br>(Римская Парная)</h3>
-                                <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                              </div>
-                              <button class="T4 button programm__card-button">Забронировать</button>
-                            </div>
-                            <p class="T5 programm__card-info">
-                              Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="programms-mobile__item">
-                          <img class="programms-mobile__img" src="./assets/images/programm4.webp" class="promramm__img">
-                          <h4 class="T5 programm-mobile__title">ДЛЯ ПАРТНЕРОВ</h4>
-                          <div class="programm-mobile__svg">
-                            <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M18 13.2583L22.9393 8.31896C23.5251 7.73318 23.5251 6.78343 22.9393 6.19764L18 1.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
-                              <path opacity="0.2" d="M22.5 7.2583L1.5 7.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="programm__card">
-                          <div class="programm__card-content">
-                            <div class="programm__card-container">
-                              <div class="programm__card-group">
-                                <h3 class="H4 programm__card-title">Сила двух мастеров</br>(Римская Парная)</h3>
-                                <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                              </div>
-                              <button class="T4 button programm__card-button">Забронировать</button>
-                            </div>
-                            <p class="T5 programm__card-info">
-                              Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
-                            </p>
-                          </div>
-                        </div>
-                      <div class="programm active">
-                        <img src="./assets/images/programm1.webp" class="promramm__img">
-                        <button class="button T2 programm__button">Забронировать</button>
-                        <div class="programm__text">
-                          <h4 class="T5 programm__text-title">ДЛЯ НЕГО</h4>
-                          <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
-                        </div>
-                        <div class="swiper programms__list-container">
-                          <div class="swiper-wrapper programms__list-cards">
-                            <div class="swiper-slide programm__card">
+                        <div class="programm__cards">
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Царь Таежник</h3>
+                                  <h3 class="H4 programm__card-title">ЭГОИСТКА:<br>Искусство быть собой</h3>
+                                  <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                </div>
+                                <button class="T4 button programm__card-button">Забронировать</button>
+                              </div>
+                              <p class="T5 programm__card-info">
+                                Роскошный перформанс для тех, кто ставит себя на первое место. Программа создана для женщин, ценящих исключительность. Персонализированный подход, парение с дубовыми вениками, пилинг с морской солью и релакс в зоне уюта. Подарите себе момент чистого наслаждения. 
+                              </p>
+                            </div>
+                          </div>
+                          <div class="programm__card">
+                            <div class="programm__card-content">
+                              <div class="programm__card-container">
+                                <div class="programm__card-group">
+                                  <h3 class="H4 programm__card-title">Царица:<br> Царство естественной роскоши</h3>
                                   <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
                                 </div>
                                 <button class="T4 button programm__card-button">Забронировать</button>
                               </div>
                               <p class="T5 programm__card-info">
-                                Парение, которое вернет силы и власть над временем. Эксклюзивный ритуал для мужчин, сочетающий силу уральской природы и мастерство банщика. Глубокое парение, контрастные ванночки для ног, массаж стоп и индивидуальный подход. Идеально для тех, кто ценит время и качество отдыха.
+                                Ритуал, вдохновлённый роскошью цариц. Цитрусовые ноты, ручная работа мастеров и уход за кожей превратят ваше тело в храм, а разум — в крепость спокойствия. Парение, пилинг и массаж стоп завершатся обтиранием льдом с зелёным чаем. 
                               </p>
                             </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Алмазное Возрождение</h3>
-                                  <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Профессиональное удаление усталости. Интенсивная программа для глубокого детокса и перезагрузки. Контрастные техники, лимфодренажный массаж, обёртывание и алтайские ингредиенты помогут вывести токсины и восстановить энергию. Для тех, кто готов к настоящему обновлению. 
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
+                          </div>
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
                                   <h3 class="H4 programm__card-title">Сила двух мастеров<br>(Римская Парная)</h3>
@@ -202,10 +199,12 @@
                                 Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
                               </p>
                             </div>
-                            <div class="swiper-slide programm__card">
+                          </div>
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Сила стихий:<br>Детокс и возрождение<br>(Римская Парная)</h3>
+                                  <h3 class="H4 programm__card-title">Сила стихий: Детокс и возрождение<br>(Римская Парная)</h3>
                                   <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
                                 </div>
                                 <button class="T4 button programm__card-button">Забронировать</button>
@@ -216,78 +215,19 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="programm">
-                        <div class="programm__shadow"></div>
-                        <img src="./assets/images/programm4.webp" class="promramm__img">
-                        <button class="button T2 programm__button">Забронировать</button>
-                        <div class="programm__text">
-                          <h4 class="T5 programm__text-title">ДЛЯ НЕЁ</h4>
-                          <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
-                        </div>
-                        <div class="swiper programms__list-container">
-                          <div class="swiper-wrapper programms__list-cards">
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">ЭГОИСТКА: Искусство быть собой</h3>
-                                  <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Роскошный перформанс для тех, кто ставит себя на первое место. Программа создана для женщин, ценящих исключительность. Персонализированный подход, парение с дубовыми вениками, пилинг с морской солью и релакс в зоне уюта. Подарите себе момент чистого наслаждения. 
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Царица: Царство естественной роскоши</h3>
-                                  <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Ритуал, вдохновлённый роскошью цариц. Цитрусовые ноты, ручная работа мастеров и уход за кожей превратят ваше тело в храм, а разум — в крепость спокойствия. Парение, пилинг и массаж стоп завершатся обтиранием льдом с зелёным чаем. 
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Сила двух мастеров<br>(Римская Парная)</h3>
-                                  <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Сила стихий:<br>Детокс и возрождение<br>(Римская Парная)</h3>
-                                  <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Три стихии для вашего обновления. Пар, веники и мыльная пена объединяются в этой программе для глубокого очищения и релакса. Натуральные ингредиенты и авторские техники помогут снять напряжение и вернуть лёгкость телу.
-                              </p>
-                            </div>
+                        <div class="programms-mobile__item">
+                          <img  src="./assets/images/programm3.webp" class="promramm__img" alt="img">
+                          <h4 class="T5 programm-mobile__title">ДЛЯ ПАРЫ</h4>
+                          <div class="programm-mobile__svg">
+                            <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18 13.2583L22.9393 8.31896C23.5251 7.73318 23.5251 6.78343 22.9393 6.19764L18 1.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                              <path opacity="0.2" d="M22.5 7.2583L1.5 7.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                            </svg>
                           </div>
                         </div>
-                      </div>
-                      <div class="programm">
-                        <img src="./assets/images/programm3.webp" class="promramm__img">
-                        <button class="button T2 programm__button">Забронировать</button>
-                        <div class="programm__text">
-                          <h4 class="T5 programm__text-title">ДЛЯ ПАРЫ</h4>
-                          <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
-                        </div>
-                        <div class="swiper programms__list-container">
-                          <div class="swiper-wrapper programms__list-cards">
-                            <div class="swiper-slide programm__card">
+                        <div class="programm__cards">
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
                                   <h3 class="H4 programm__card-title">Отдых во SPAсение<br>(Русская Парная)</h3>
@@ -299,31 +239,9 @@
                                 Побег из городской суеты. Идеальный вариант для пар. Мягкое парение, растирание пихтовым веником, массаж и пилинг подарят глубокое расслабление и восстановление. А завершить все это можно ужином в уютной атмосфере.
                               </p>
                             </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Сила Сибири<br>(Римская Парная)</h3>
-                                  <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Натуральная мощь Сибири в каждом ритуале. Прогрев в калдариуме, пилинг берёзовым пеплом, массаж мёдом и лавандой — всё для глубокого восстановления. Программа идеальна для тех, кто ценит природные ингредиенты.
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Отдых во SPAсение<br>(Русская Парная)</h3>
-                                  <p class="T4 programm__card-descp">45 000 ₽ - 3 часа</p>
-                                </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
-                              </div>
-                              <p class="T5 programm__card-info">
-                                Побег из городской суеты. Идеальный вариант для пар. Мягкое парение, растирание пихтовым веником, массаж и пилинг подарят глубокое расслабление и восстановление. А завершить все это можно ужином в уютной атмосфере.
-                              </p>
-                            </div>
-                            <div class="swiper-slide programm__card">
+                          </div>
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
                                   <h3 class="H4 programm__card-title">Сила Сибири<br>(Римская Парная)</h3>
@@ -337,18 +255,19 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="programm">
-                        <div class="programm__shadow"></div>
-                        <img src="./assets/images/programm2.webp" class="promramm__img">
-                        <button class="button T2 programm__button">Забронировать</button>
-                        <div class="programm__text">
-                          <h4 class="T5 programm__text-title">ДЛЯ ПАРТНЕРОВ</h4>
-                          <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
+                        <div class="programms-mobile__item">
+                          <img  src="./assets/images/programm4.webp" class="promramm__img" alt="img">
+                          <h4 class="T5 programm-mobile__title">ДЛЯ ПАРТНЕРОВ</h4>
+                          <div class="programm-mobile__svg">
+                            <svg width="25px" height="15px" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18 13.2583L22.9393 8.31896C23.5251 7.73318 23.5251 6.78343 22.9393 6.19764L18 1.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                              <path opacity="0.2" d="M22.5 7.2583L1.5 7.2583" stroke="white" stroke-width="2.25" stroke-linecap="round"/>
+                            </svg>
+                          </div>
                         </div>
-                        <div class="swiper programms__list-container">
-                          <div class="swiper-wrapper programms__list-cards">
-                            <div class="swiper-slide programm__card">
+                        <div class="programm__cards">
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
                                   <h3 class="H4 programm__card-title">Энергия и гармония<br>(Русская Парная)</h3>
@@ -360,10 +279,12 @@
                                 Интенсивный релакс без спешки. Групповое парение, индивидуальные процедуры и финальный массаж подарят ощущение единства и восстановления. Идеально для друзей или коллег. Программа расчитанна до 4 человек.
                               </p>
                             </div>
-                            <div class="swiper-slide programm__card">
+                          </div>
+                          <div class="programm__card">
+                            <div class="programm__card-content">
                               <div class="programm__card-container">
                                 <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Партнерство,<br>пар и сила традиций<br>(VIP)</h3>
+                                  <h3 class="H4 programm__card-title">Партнерство, пар и сила традиций<br>(VIP)</h3>
                                   <p class="T4 programm__card-descp">100 000 ₽ - 5 часов</p>
                                 </div>
                                 <button class="T4 button programm__card-button">Забронировать</button>
@@ -372,23 +293,242 @@
                                 Элитный сервис для особых встреч. Персональное внимание пар-мейстера, ротация между парением и массажем, ужин с авторскими настойками. Программа укрепляет связи и дарит незабываемый опыт. Программа расчитанна для 4 человек.
                               </p>
                             </div>
-                            <div class="swiper-slide programm__card">
-                              <div class="programm__card-container">
-                                <div class="programm__card-group">
-                                  <h3 class="H4 programm__card-title">Энергия и гармония<br>(Русская Парная)</h3>
-                                  <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="programms__list">
+                        <div class="programm active">
+                          <img src="./assets/images/programm1.webp" class="promramm__img" alt="img">
+                          <button class="button T2 programm__button">Забронировать</button>
+                          <div class="programm__text">
+                            <h4 class="T5 programm__text-title">ДЛЯ НЕГО</h4>
+                            <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
+                          </div>
+                          <div class="swiper programms__list-container">
+                            <div class="swiper-wrapper programms__list-cards">
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Царь Таежник</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
                                 </div>
-                                <button class="T4 button programm__card-button">Забронировать</button>
+                                <p class="T5 programm__card-info">
+                                  Парение, которое вернет силы и власть над временем. Эксклюзивный ритуал для мужчин, сочетающий силу уральской природы и мастерство банщика. Глубокое парение, контрастные ванночки для ног, массаж стоп и индивидуальный подход. Идеально для тех, кто ценит время и качество отдыха.
+                                </p>
                               </div>
-                              <p class="T5 programm__card-info">
-                                Интенсивный релакс без спешки. Групповое парение, индивидуальные процедуры и финальный массаж подарят ощущение единства и восстановления. Идеально для друзей или коллег. Программа расчитанна до 4 человек.
-                              </p>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Алмазное Возрождение</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Профессиональное удаление усталости. Интенсивная программа для глубокого детокса и перезагрузки. Контрастные техники, лимфодренажный массаж, обёртывание и алтайские ингредиенты помогут вывести токсины и восстановить энергию. Для тех, кто готов к настоящему обновлению. 
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила двух мастеров<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">35 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила стихий:<br>Детокс и возрождение<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Три стихии для вашего обновления. Пар, веники и мыльная пена объединяются в этой программе для глубокого очищения и релакса. Натуральные ингредиенты и авторские техники помогут снять напряжение и вернуть лёгкость телу.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm">
+                          <div class="programm__shadow"></div>
+                          <img src="./assets/images/programm4.webp" class="promramm__img" alt="img">
+                          <button class="button T2 programm__button">Забронировать</button>
+                          <div class="programm__text">
+                            <h4 class="T5 programm__text-title">ДЛЯ НЕЁ</h4>
+                            <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
+                          </div>
+                          <div class="swiper programms__list-container">
+                            <div class="swiper-wrapper programms__list-cards">
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">ЭГОИСТКА: Искусство быть собой</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Роскошный перформанс для тех, кто ставит себя на первое место. Программа создана для женщин, ценящих исключительность. Персонализированный подход, парение с дубовыми вениками, пилинг с морской солью и релакс в зоне уюта. Подарите себе момент чистого наслаждения. 
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Царица: Царство естественной роскоши</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Ритуал, вдохновлённый роскошью цариц. Цитрусовые ноты, ручная работа мастеров и уход за кожей превратят ваше тело в храм, а разум — в крепость спокойствия. Парение, пилинг и массаж стоп завершатся обтиранием льдом с зелёным чаем. 
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила двух мастеров<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Два мастера — двойной эффект. Синергия парения и массажа: пар-мейстер проведёт вас через контраст эмоций и ощущений, а массажист проработает зоны напряжения горячими камнями. Глубокое восстановление за 3 часа.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила стихий:<br>Детокс и возрождение<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Три стихии для вашего обновления. Пар, веники и мыльная пена объединяются в этой программе для глубокого очищения и релакса. Натуральные ингредиенты и авторские техники помогут снять напряжение и вернуть лёгкость телу.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm">
+                          <img src="./assets/images/programm3.webp" class="promramm__img" alt="img">
+                          <button class="button T2 programm__button">Забронировать</button>
+                          <div class="programm__text">
+                            <h4 class="T5 programm__text-title">ДЛЯ ПАРЫ</h4>
+                            <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
+                          </div>
+                          <div class="swiper programms__list-container">
+                            <div class="swiper-wrapper programms__list-cards">
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Отдых во SPAсение<br>(Русская Парная)</h3>
+                                    <p class="T4 programm__card-descp">45 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Побег из городской суеты. Идеальный вариант для пар. Мягкое парение, растирание пихтовым веником, массаж и пилинг подарят глубокое расслабление и восстановление. А завершить все это можно ужином в уютной атмосфере.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила Сибири<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Натуральная мощь Сибири в каждом ритуале. Прогрев в калдариуме, пилинг берёзовым пеплом, массаж мёдом и лавандой — всё для глубокого восстановления. Программа идеальна для тех, кто ценит природные ингредиенты.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Отдых во SPAсение<br>(Русская Парная)</h3>
+                                    <p class="T4 programm__card-descp">45 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Побег из городской суеты. Идеальный вариант для пар. Мягкое парение, растирание пихтовым веником, массаж и пилинг подарят глубокое расслабление и восстановление. А завершить все это можно ужином в уютной атмосфере.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Сила Сибири<br>(Римская Парная)</h3>
+                                    <p class="T4 programm__card-descp">50 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Натуральная мощь Сибири в каждом ритуале. Прогрев в калдариуме, пилинг берёзовым пеплом, массаж мёдом и лавандой — всё для глубокого восстановления. Программа идеальна для тех, кто ценит природные ингредиенты.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="programm">
+                          <div class="programm__shadow"></div>
+                          <img src="./assets/images/programm2.webp" class="promramm__img" alt="img">
+                          <button class="button T2 programm__button">Забронировать</button>
+                          <div class="programm__text">
+                            <h4 class="T5 programm__text-title">ДЛЯ ПАРТНЕРОВ</h4>
+                            <p class="T5 programm__text-descp">Отдых, включающий спортивный массаж, расслабление в инфракрасной сауне,  ужин с аутентичными блюдами.</p>
+                          </div>
+                          <div class="swiper programms__list-container">
+                            <div class="swiper-wrapper programms__list-cards">
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Энергия и гармония<br>(Русская Парная)</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Интенсивный релакс без спешки. Групповое парение, индивидуальные процедуры и финальный массаж подарят ощущение единства и восстановления. Идеально для друзей или коллег. Программа расчитанна до 4 человек.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Партнерство,<br>пар и сила традиций<br>(VIP)</h3>
+                                    <p class="T4 programm__card-descp">100 000 ₽ - 5 часов</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Элитный сервис для особых встреч. Персональное внимание пар-мейстера, ротация между парением и массажем, ужин с авторскими настойками. Программа укрепляет связи и дарит незабываемый опыт. Программа расчитанна для 4 человек.
+                                </p>
+                              </div>
+                              <div class="swiper-slide programm__card">
+                                <div class="programm__card-container">
+                                  <div class="programm__card-group">
+                                    <h3 class="H4 programm__card-title">Энергия и гармония<br>(Русская Парная)</h3>
+                                    <p class="T4 programm__card-descp">40 000 ₽ - 3 часа</p>
+                                  </div>
+                                  <button class="T4 button programm__card-button">Забронировать</button>
+                                </div>
+                                <p class="T5 programm__card-info">
+                                  Интенсивный релакс без спешки. Групповое парение, индивидуальные процедуры и финальный массаж подарят ощущение единства и восстановления. Идеально для друзей или коллег. Программа расчитанна до 4 человек.
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                </div>
             </section>
             <section class="areas">
               <div class="wrapper areas__wrapper">
@@ -396,35 +536,35 @@
                   <div class="swiper-wrapper areas__container">
                     <div class="swiper-slide areas__item">
                       <div class="areas__item-text">
-                        <img class="areas__item-img" src="./assets/images/areaRestoran.webp"/>
+                        <img class="areas__item-img" alt="img" src="./assets/images/areaRestoran.webp"/>
                         <h3 class="H4 areas__item-title">РЕСТОРАН</h3>
                         <p class="T4 areas__item-descp">Cоздан при участии имя фамилия</p>
                       </div>
                     </div>
                     <div class="swiper-slide areas__item">
                       <div class="areas__item-text">
-                        <img class="areas__item-img" src="./assets/images/areaRussian.webp"/>
+                        <img class="areas__item-img" alt="img" src="./assets/images/areaRussian.webp"/>
                         <h3 class="H4 areas__item-title">Русская зона</h3>
                         <p class="T4 areas__item-descp">Cоздан при участии имя фамилия</p>
                       </div>
                     </div>
                     <div class="swiper-slide areas__item">
                       <div class="areas__item-text">
-                        <img class="areas__item-img" src="./assets/images/areaRim.webp"/>
+                        <img class="areas__item-img" alt="img" src="./assets/images/areaRim.webp"/>
                         <h3 class="H4 areas__item-title">Римская зона</h3>
                         <p class="T4 areas__item-descp">Cоздан при участии имя фамилия</p>
                       </div>
                     </div>
                     <div class="swiper-slide areas__item">
                       <div class="areas__item-text">
-                        <img class="areas__item-img" src="./assets/images/areaRestoran.webp"/>
+                        <img class="areas__item-img" alt="img" src="./assets/images/areaRestoran.webp"/>
                         <h3 class="H4 areas__item-title">РЕСТОРАН</h3>
                         <p class="T4 areas__item-descp">Cоздан при участии имя фамилия</p>
                       </div>
                     </div>
                     <div class="swiper-slide areas__item">
                       <div class="areas__item-text">
-                        <img class="areas__item-img" src="./assets/images/areaRussian.webp"/>
+                        <img class="areas__item-img" alt="img" src="./assets/images/areaRussian.webp"/>
                         <h3 class="H4 areas__item-title">Русская зона</h3>
                         <p class="T4 areas__item-descp">Cоздан при участии имя фамилия</p>
                       </div>
@@ -433,7 +573,8 @@
                 </div>
               </div>
             </section>
-            <section id="why" class="why">
+            <section class="why">
+                <div id="why" class="why__ref"></div>
                 <div class="wrapper why__wrapper">
                     <div class="why__text">
                         <h3 class="H4 why__h3">почему мы?</h3>
@@ -527,6 +668,12 @@
             </div>
           </form>
         </div>
+        <nav class="menu">
+          <a class="T2 menu__item" href="#about">О нас</a>
+          <a class="T2 menu__item" href="#programs">Программы</a>
+          <a class="T2 menu__item" href="#why">Почему мы</a>
+          <a class="menu__item" href="#contacts">Контакты</a>
+        </nav>
         <!-- <div class="progress-container">
           <div class="progress-line"></div>
           <div class="progress-fill" id="progressFill"></div>
