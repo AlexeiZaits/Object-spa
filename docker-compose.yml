@@ -1,0 +1,39 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - app-network
+    volumes:
+      - ./frontend/dist:/app/dist
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  nginx:
+    build:
+      context: .                
+      dockerfile: ./nginx/Dockerfile
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/dist:/app/dist
+    networks:
+      - app-network
+    restart: always
+
+networks:
+  app-network:
+    driver: bridge
