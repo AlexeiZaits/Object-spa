@@ -2,8 +2,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from aiogram import Bot
 
-BOT_TOKEN = "7860498283:AAHhGZKeKevKJEPbEk-YEIJzPgaMndSJWHU"
-CHAT_ID = "-1002586509665"
+BOT_TOKEN = ""
+CHAT_ID = ""
 
 bot = Bot(token=BOT_TOKEN)
 
