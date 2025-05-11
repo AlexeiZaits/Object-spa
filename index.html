@@ -9,8 +9,8 @@
         <!-- <link rel="icon" href="./assets/images//favicon-16x16.png" sizes="16x16" type="image/png"> -->
         <!-- <link rel="icon" href="./assets/images//favicon-32x32.png" sizes="32x32" type="image/png"> -->
         <!-- <link rel="manifest" href="./assets/images/site.webmanifest"> -->
-      <script type="module" crossorigin src="/Object-spa/assets/index-Dg4s41Mp.js"></script>
-      <link rel="stylesheet" crossorigin href="/Object-spa/assets/index-B8UqJFbr.css">
+      <script type="module" crossorigin src="/Object-spa/assets/index--CctUyyZ.js"></script>
+      <link rel="stylesheet" crossorigin href="/Object-spa/assets/index-UwxJAI-P.css">
     </head>
     <body>
         <header id="header" class="header">
@@ -26,15 +26,21 @@
                         </nav>
                     </div>
                     <div class="header__main-fixed fixed">
-                        <img class="header__logo" src="/Object-spa/assets/logo-BrT7vhaV.png" alt="logo">
+                        <a class="header__logo fixed" href="#header">
+                          <img class="header__img fixed" src="/Object-spa/assets/logo-BrT7vhaV.png" alt="logo">
+                        </a>
                         <nav class="header__nav">
                             <a class="T2 header__nav-item" href="#about">О нас</a>
                             <a class="T2 header__nav-item" href="#programs">Программы</a>
                             <a class="T2 header__nav-item" href="#why">Почему мы</a>
                             <a class="T2 header__nav-item" href="#contacts">Контакты</a>
                         </nav>
+                        <div class="burger">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
                     </div>
-                    <div class="header__sentinel"></div>
                     <div class="header__footer">
                         <img class="header__footer-logo" src="/Object-spa/assets/logo-BrT7vhaV.png" alt="logo">
                         <p class="T4 header__footer-text">место для тех - <br/>кто ценит качественный отдых</p>
@@ -69,7 +75,8 @@
                     </div>
                 </div>
             </section>
-            <section id="programs" class="programs">
+            <section class="programs">
+                <div id="programs" class="programs__ref"></div>
                 <div class="wrapper programs__wrapper">
                     <h2 class="H2 programs__title">Программы отдыха</h2>
                     <div class="programms__list-mobile">
@@ -568,7 +575,8 @@
                 </div>
               </div>
             </section>
-            <section id="why" class="why">
+            <section class="why">
+                <div id="why" class="why__ref"></div>
                 <div class="wrapper why__wrapper">
                     <div class="why__text">
                         <h3 class="H4 why__h3">почему мы?</h3>
@@ -662,6 +670,12 @@
             </div>
           </form>
         </div>
+        <nav class="menu">
+          <a class="T2 menu__item" href="#about">О нас</a>
+          <a class="T2 menu__item" href="#programs">Программы</a>
+          <a class="T2 menu__item" href="#why">Почему мы</a>
+          <a class="T2 menu__item" href="#contacts">Контакты</a>
+        </nav>
         <!-- <div class="progress-container">
           <div class="progress-line"></div>
           <div class="progress-fill" id="progressFill"></div>
