@@ -27,8 +27,10 @@ services:
     container_name: nginx-proxy
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./frontend/dist:/app/dist
+      - ~/ssl:/etc/nginx/ssl:ro
     networks:
       - app-network
     restart: always
